@@ -1,0 +1,19 @@
+{
+  "name": "epdapi",
+  "version": "1.0.0",
+  "description": "dummy API endpoints for EPD project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesmarket/epdapi.git"
+  },
+  "author": "Ryan Bartsch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yesmarket/epdapi/issues"
+  },
+  "homepage": "https://github.com/yesmarket/epdapi#readme"
+}
