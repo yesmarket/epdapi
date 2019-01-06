@@ -1,0 +1,54 @@
+swagger: "2.0"
+info:
+   version: "0.0.1"
+   title: PaymentGateway
+basePath: /
+schemes:
+   - http
+   - https
+consumes:
+   - application/json
+produces:
+   - application/json
+paths:
+   /api/payments:
+      get:
+         description: Gets a list of the payments
+         tags:
+            - PaymentGateway
+         responses:
+            "200":
+               description: Success
+               schema:
+                  $ref: "#/definitions/GenericResponse"
+            default:
+               description: Error
+               schema:
+                  $ref: "#/definitions/ErrorResponse"
+   /api/cards:
+      get:
+         description: Gets credit card information
+         tags:
+            - DigitalWallet
+         responses:
+            "200":
+               description: Success
+               schema:
+                  $ref: "#/definitions/GenericResponse"
+            default:
+               description: Error
+               schema:
+                  $ref: "#/definitions/ErrorResponse"
+definitions:
+   GenericResponse:
+      required:
+         - message
+      properties:
+         message:
+            type: string
+   ErrorResponse:
+      required:
+         - message
+      properties:
+         message:
+            type: string

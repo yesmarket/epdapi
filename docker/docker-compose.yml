@@ -1,0 +1,23 @@
+version: '3.5'
+
+networks:
+  dummy:
+
+services:
+
+   reverseproxy:
+      image: reverseproxy
+      restart: unless-stopped
+      ports:
+         - 80:80
+         - 443:443
+      networks:
+         - dummy
+
+   dummyapis:
+      image: dummyapis
+      restart: unless-stopped
+      expose:
+         - 8080
+      links:
+         - reverseproxy

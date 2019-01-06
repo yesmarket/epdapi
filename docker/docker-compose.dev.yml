@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+
+   reverseproxy:
+      build:
+         context: nginx/
+
+   dummyapis:
+      build:
+         context: epd/
+      ports:
+         - 8080:8080

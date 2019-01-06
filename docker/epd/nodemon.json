@@ -1,0 +1,7 @@
+{
+  "ignore": [
+    ".gitignore",
+    "README.md"
+  ],
+  "ext": "js,json,yaml"
+}
