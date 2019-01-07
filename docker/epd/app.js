@@ -13,12 +13,15 @@ app.get('/', function(req, res){
    res.send('working');
 });
 
+app.use(express.static('static'));
+
 var routes = require('./routes')();
 app.use('/api', routes.paymentGateway);
 app.use('/api', routes.digitalWallet);
 
 var options = {
-  customCss: '.models { display: none; }'
+   customCss: 'section.models { display: none; }',
+   customJs: '/custom.js'
 };
 
 app.use('/api-docs', swagger.serve, swagger.setup(yaml.load('./api.yaml'), options));
