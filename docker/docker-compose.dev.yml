@@ -5,6 +5,8 @@ services:
    reverseproxy:
       build:
          context: nginx/
+         args:
+            DOCKER_HOST: $DOCKER_HOST
 
    dummyapis:
       build:

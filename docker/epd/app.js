@@ -20,10 +20,9 @@ app.use('/api', routes.paymentGateway);
 app.use('/api', routes.digitalWallet);
 
 var options = {
-   customCss: 'section.models { display: none; }',
+   customCss: 'section.models, div.information-container { display: none; }',
    customJs: '/custom.js'
 };
-
 app.use('/api-docs', swagger.serve, swagger.setup(yaml.load('./api.yaml'), options));
 
 var port = process.env.PORT || 8080;
